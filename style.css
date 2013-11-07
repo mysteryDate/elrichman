@@ -1,0 +1,31 @@
+/* HTML5 boilerplate */
+html, body {
+	height: 100%;
+}
+* {
+	font-family: helvetica-light, helvetica, sans;
+	font-weight: normal;
+}
+
+/*Background*/
+body {
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-color: hsl(24, 28%, 54%);
+	background-position: center;
+}
+
+/*Titles*/
+#titleDiv {
+	font-size: 5em;
+}
+
+#titleDiv h1 {
+	font-size: 3em
+}
+
+/*Blurring backgrounds!*/
+.blurPanel {
+	height: 100%;
+	width: 100%;
+}
