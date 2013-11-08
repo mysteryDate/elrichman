@@ -1,10 +1,23 @@
 /* HTML5 boilerplate */
 html, body {
 	height: 100%;
+	overflow: hidden;
 }
 * {
 	font-family: helvetica-light, helvetica, sans;
-	font-weight: normal;
+	font-weight: 100;
+	text-decoration: none;
+	margin: 0;
+}
+
+/*Animations!*/
+* {
+	/*transition: color 4s, background 4s;*/
+	/*-moz-transition: color 4s, background 4s;*/
+	/*-webkit-transition: color 4s, background 4s;*/
+}
+#linksDiv, #titleDiv {
+	-webkit-transition: color 4s;
 }
 
 /*Background*/
@@ -12,20 +25,54 @@ body {
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-color: hsl(24, 28%, 54%);
-	background-position: center;
-}
-
-/*Titles*/
-#titleDiv {
-	font-size: 5em;
-}
-
-#titleDiv h1 {
-	font-size: 3em
+	/*background-position: center;*/
+	-webkit-transition: background-position 4s;
 }
 
 /*Blurring backgrounds!*/
 .blurPanel {
+	-webkit-transition: background 4s;
+	z-index: -1;
+	position: absolute;
 	height: 100%;
 	width: 100%;
+}
+
+/*Titles*/
+#titleDiv {
+	/*position: absolute;*/
+	font-size: 8em;
+	width: 50%;
+	left: 1em;
+	top: 1em;
+	color: hsla(0, 100%,100%, 0);
+}
+
+
+/*Links*/
+#linksDiv {
+	font-size: 4em;
+	margin-top: 5%;
+	width: 50%;
+	text-align: right;
+	color: hsla(0, 100%,100%, 0);
+}
+#linksDiv div {
+	margin-top: 5%;
+}
+a {
+	color: inherit;
+}
+a:hover {
+	opacity: 0.5;
+}
+
+/*Bandcamp!*/
+#playerDiv {
+	visibility: hidden;
+	position: absolute;
+	width: 50%;
+	bottom: 10%;
+	left: 0; right: 0;
+	margin: 0 auto;
 }
