@@ -1,23 +1,22 @@
 /* HTML5 boilerplate */
 html, body {
 	height: 100%;
-	overflow: hidden;
+	/*overflow: hidden;*/
 }
 * {
 	font-family: helvetica-light, helvetica, sans;
 	font-weight: 100;
 	text-decoration: none;
 	margin: 0;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-o-user-select: none;
 }
 
-/*Animations!*/
-* {
-	/*transition: color 4s, background 4s;*/
-	/*-moz-transition: color 4s, background 4s;*/
-	/*-webkit-transition: color 4s, background 4s;*/
-}
 #linksDiv, #titleDiv {
 	-webkit-transition: color 4s;
+	-moz-transition: color 4s;
 }
 
 /*Background*/
@@ -25,12 +24,11 @@ body {
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-color: hsl(24, 28%, 54%);
-	/*background-position: center;*/
-	-webkit-transition: background-position 4s;
 }
 
 /*Blurring backgrounds!*/
 .blurPanel {
+	-moz-transition: background 4s;
 	-webkit-transition: background 4s;
 	z-index: -1;
 	position: absolute;
@@ -42,37 +40,25 @@ body {
 #titleDiv {
 	/*position: absolute;*/
 	font-size: 8em;
-	width: 50%;
+	/*width: 50%;*/
 	left: 1em;
 	top: 1em;
 	color: hsla(0, 100%,100%, 0);
+	white-space: nowrap;
 }
 
 
 /*Links*/
 #linksDiv {
+	margin-top: 5px;
 	font-size: 4em;
-	margin-top: 5%;
 	width: 50%;
 	text-align: right;
 	color: hsla(0, 100%,100%, 0);
 }
 #linksDiv div {
-	margin-top: 5%;
+	margin-top: 2%;
 }
 a {
 	color: inherit;
-}
-a:hover {
-	opacity: 0.5;
-}
-
-/*Bandcamp!*/
-#playerDiv {
-	visibility: hidden;
-	position: absolute;
-	width: 50%;
-	bottom: 10%;
-	left: 0; right: 0;
-	margin: 0 auto;
-}
+	cursor: pointer;
