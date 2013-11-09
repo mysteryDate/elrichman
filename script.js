@@ -45,22 +45,27 @@ function Color(){
 	}
 }
 
-$(document).ready(function() {
+backgroundImage.onload = function() {
+	$('body').css('background-image', 'url("background.jpg")');
+	song = $('audio')[0];
+	color = new Color();
+	window.onresize();
+	add_handlers();
+	// $('.playerDiv').append(
+	// 	"<audio>"+
+	// 	  '<source src="cool_shade_of_a_palm.mp3" type="audio/mpeg">'+
+	// 	  '<source src="cool_shade_of_a_palm.ogg" type="audio/ogg">'+
+	// 	'</audio>'
+	// );
+	$('.startHidden').css('display','block');
+	window.setTimeout(function(){
+		change_color();
+	},1000);
+	window.setInterval(function(){
+		change_color();
+	},4000);
+}
 
-	backgroundImage.onload = function() {
-		$('body').css('background-image', 'url("background.jpg")');
-		song = $('audio')[0];
-		color = new Color();
-		window.onresize();
-		add_handlers();
-		window.setTimeout(function(){
-			change_color();
-		},1000);
-		window.setInterval(function(){
-			change_color();
-		},4000);
-	}
-});
 
 function change_color() {
 	color.change();
@@ -107,5 +112,9 @@ function add_handlers() {
 	});
 	$(song).on('ended', function(){
 		$('#play').text('Play');
+	});
+	$(song).on('loadeddata', function(){
+		console.log('loaded');
+		$('#play').css('display','inherit');
 	});
 }

@@ -43,7 +43,7 @@ body {
 	/*width: 50%;*/
 	left: 1em;
 	top: 1em;
-	color: hsla(0, 100%,100%, 0);
+	color: white;
 	white-space: nowrap;
 }
 
@@ -54,7 +54,7 @@ body {
 	font-size: 4em;
 	width: 50%;
 	text-align: right;
-	color: hsla(0, 100%,100%, 0);
+	color: white;
 }
 #linksDiv div {
 	margin-top: 2%;
@@ -62,3 +62,10 @@ body {
 a {
 	color: inherit;
 	cursor: pointer;
+}
+#play {
+	/*display: none;*/
+}
+.startHidden{
+	display: none;
+}
