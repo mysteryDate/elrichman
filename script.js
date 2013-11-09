@@ -4,6 +4,7 @@ var backgroundImage = new Image();
 backgroundImage.src = "background.jpg";
 var color;
 var song;
+var magicRatio = 12; // Don't ask
 
 function Color(){
 	this.hue = Math.round(Math.random()*360);
@@ -82,13 +83,17 @@ window.onresize = function(e) {
 	var windowWidth = $(window).width();
 	var aspectRatio = windowWidth/windowHeight;
 	if ( aspectRatio > 1.7 )
-		fontSize = Math.round( windowHeight*1.7/9.1 );
+		fontSize = Math.round( windowHeight*1.7/magicRatio );
 	else if ( aspectRatio < 1.5 )
-		fontSize = Math.round( windowHeight*1.5/9.1 );
+		fontSize = Math.round( windowHeight*1.5/magicRatio );
 	else
-		fontSize = Math.round( windowWidth/9.1 );
+		fontSize = Math.round( windowWidth/magicRatio);
+	if( fontSize*7 > windowWidth )
+		fontSize = Math.round( windowWidth/7);
 	$('#titleDiv').css('font-size', fontSize + 'px');
 	$('#linksDiv').css('font-size', fontSize/2 + 'px');
+	$('#titleDiv, #linksDiv').css('width', fontSize*6.5 + 'px');
+	$('#linksDiv').css('margin-top', fontSize/2 + 'px');
 }
 
 function add_handlers() {

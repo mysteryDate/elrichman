@@ -40,7 +40,8 @@ body {
 #titleDiv {
 	/*position: absolute;*/
 	font-size: 8em;
-	/*width: 50%;*/
+	width: 50%;
+	text-align: right;
 	left: 1em;
 	top: 1em;
 	color: white;
@@ -50,7 +51,7 @@ body {
 
 /*Links*/
 #linksDiv {
-	margin-top: 5px;
+	margin-top: 5%;
 	font-size: 4em;
 	width: 50%;
 	text-align: right;
