@@ -15,10 +15,10 @@ function Color(){
 	this.lightness2 = this.lightness + 50;
 
 	this.change = function() {
-		this.hue += 180 + Math.round(Math.random()*90);
-		this.saturation += 50 + Math.round(Math.random()*20);
-		this.lightness += 50 + Math.round(Math.random()*20);
-		this.opacity += 0.5 + Math.random()*0.4;
+		this.hue += 135 + Math.round(Math.random()*90);
+		this.saturation += 40 + Math.round(Math.random()*20);
+		this.lightness += 40 + Math.round(Math.random()*20);
+		this.opacity += 0.3 + Math.random()*0.4;
 		this.hue2 = this.hue + 180;
 		this.lightness2 = this.lightness + 50;
 		this.wrap();
