@@ -120,6 +120,6 @@ function add_handlers() {
 	});
 	$(song).on('loadeddata', function(){
 		console.log('loaded');
-		$('#play').css('display','inherit');
+		$('#play').css('display','inline-block');
 	});
 }
